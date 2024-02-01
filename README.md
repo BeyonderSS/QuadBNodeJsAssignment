@@ -1,6 +1,6 @@
-# Project Name
+# QuadBNodeJsAssignment
 
-Brief project description.
+This is an assignment submission at Quad B.
 
 ## Getting Started
 
@@ -18,13 +18,13 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/BeyonderSS/QuadBNodeJsAssignment.git
    ```
 
 2. Change to the project directory:
 
    ```bash
-   cd your-repository
+   cd QuadBNodeJsAssignment
    ```
 
 3. Install dependencies:
@@ -55,7 +55,7 @@ This command watches for changes in the input CSS file (`input.css`) and outputs
 
 ## Authors
 
-- [Your Name](https://github.com/your-username)
+- [Puneet Bhardwaj]((https://github.com/BeyonderSS))
 
 ## License
 
