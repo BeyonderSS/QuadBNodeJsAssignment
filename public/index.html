@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="dark transition-all ease-in-out duration-500"
+  style="font-family: 'Oswald', sans-serif"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HodlInfo</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      class="flex lg:flex-row md:flex-row flex-col justify-between items-center px-10 dark:bg-[#191D28] dark:text-gray-200 h-32 font-bold"
+    >
+      <!-- nav logo section  -->
+      <img
+        src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png"
+        class="h-14"
+        alt=""
+      />
+      <!-- nav dropdown middle buttons  -->
+      <div class="flex space-x-5 items-center">
+        <select class="uppercase p-2 px-4 rounded-xl dark:bg-[#2E3241]">
+          <option selected class="bg-white text-gray-900 rounded-xl">
+            INR
+          </option>
+         
+        </select>
+        <select id="digitalCurrencyDropdown" class="uppercase p-2 px-4 rounded-xl dark:bg-[#2E3241]">
+          <option selected>BTC</option>
+          <option>ETH</option>
+        </select>
+        <button
+          class="uppercase p-2 px-4 rounded-xl dark:bg-[#2E3241] bg-gray-200"
+        >
+          buy BTC
+        </button>
+      </div>
+
+      <!-- nav right navigation and theme toggle  buttons  -->
+      <div class="flex space-x-4 items-center">
+        <div
+          id="timerDisplay"
+          class="dark:bg-[#2E3241] rounded-full p-1 px-2 text-[#3DC6C1] border-2 border-[#3DC6C1]"
+        ></div>
+        <button
+          class="flex space-x-3 bg-[#3DC6C1] text-white dark:text-white p-2 rounded-xl py-2"
+        >
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              class="h-6 fill-white"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"
+              ></path>
+            </svg>
+          </span>
+          <span>Connect Telegram</span>
+        </button>
+        <!-- <button onclick="{toggleDarkMode()}">BTN</button> -->
+        <label class="switch">
+          <input type="checkbox" onchange="{toggleDarkMode()}" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <section class="dark:bg-[#191D28] px-10">
+      <!-- price trend sec starts  -->
+      <h1 class="text-gray-500 text-4xl text-center tracking-tighter pb-8">
+        Best Price to Trade
+      </h1>
+      <div class="flex justify-between items-center">
+        <div class="flex justify-center items-center flex-col">
+          <div class="dark text-[#3DC6C1] text-4xl font-semibold">0.79%</div>
+          <div class="text-xl dark:text-gray-500">5 Mins</div>
+        </div>
+        <div class="flex justify-center items-center flex-col">
+          <div class="dark text-[#3DC6C1] text-4xl font-semibold">0.79%</div>
+          <div class="text-xl dark:text-gray-500">1 Hour</div>
+        </div>
+        <div class="flex justify-center items-center flex-col space-y-4">
+          <div class="text-8xl font-semibold dark:text-white">₹ 38,30,009</div>
+          <div class="dark:text-gray-500 text-lg tracking-tighter">
+            Average BTC/INR net price including commission
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-col">
+          <div class="dark text-[#3DC6C1] text-4xl font-semibold">0.79%</div>
+          <div class="text-xl dark:text-gray-500">1 Day</div>
+        </div>
+        <div class="flex justify-center items-center flex-col">
+          <div class="dark text-[#3DC6C1] text-4xl font-semibold">0.79%</div>
+          <div class="text-xl dark:text-gray-500">7 Days</div>
+        </div>
+      </div>
+      <!-- price trend section end  -->
+      <!-- table section start  -->
+      <div class="pt-16 border-b-2 border-gray-700">
+        <div class="flex justify-between px-4">
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter pr-4"
+          >
+            #
+          </div>
+
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter"
+          >
+            Platform
+          </div>
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter"
+          >
+            Last Traded Price
+          </div>
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter"
+          >
+            Buy / Sell Price
+          </div>
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter"
+          >
+            Difference
+          </div>
+          <div
+            class="text-gray-500 font-bold uppercase text-2xl tracking-tighter"
+          >
+            Savings
+          </div>
+        </div>
+        <!-- table data rowsss  -->
+        <div
+          class="rounded-2xl dark:bg-[#2E3241] bg-gray-100 dark:text-white font-bold text-2xl flex justify-between p-4 my-4"
+        >
+          <div class="border-gray-200 pb-2">1</div>
+
+          <div class="border-gray-200 pb-2">
+            <div class="flex items-center">
+              <img src="wazirx.png" alt="WazirX" class="w-6 h-6 mr-2" />
+              <span>WazirX</span>
+            </div>
+          </div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010</div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010 / ₹ 37,40,000</div>
+          <div class="border-gray-200 pb-2 text-red-500">-2.84 %</div>
+          <div class="border-gray-200 pb-2 text-red-500">
+            ₹ <span class="text-red-500">-1,08,716</span>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl dark:bg-[#2E3241] bg-gray-100 dark:text-white font-bold text-2xl flex justify-between p-4 my-4"
+        >
+          <div class="border-gray-200 pb-2">1</div>
+
+          <div class="border-gray-200 pb-2">
+            <div class="flex items-center">
+              <img src="wazirx.png" alt="WazirX" class="w-6 h-6 mr-2" />
+              <span>WazirX</span>
+            </div>
+          </div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010</div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010 / ₹ 37,40,000</div>
+          <div class="border-gray-200 pb-2 text-red-500">-2.84 %</div>
+          <div class="border-gray-200 pb-2 text-red-500">
+            ₹ <span class="text-red-500">-1,08,716</span>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl dark:bg-[#2E3241] bg-gray-100 dark:text-white font-bold text-2xl flex justify-between p-4 my-4"
+        >
+          <div class="border-gray-200 pb-2">1</div>
+
+          <div class="border-gray-200 pb-2">
+            <div class="flex items-center">
+              <img src="wazirx.png" alt="WazirX" class="w-6 h-6 mr-2" />
+              <span>WazirX</span>
+            </div>
+          </div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010</div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010 / ₹ 37,40,000</div>
+          <div class="border-gray-200 pb-2 text-red-500">-2.84 %</div>
+          <div class="border-gray-200 pb-2 text-red-500">
+            ₹ <span class="text-red-500">-1,08,716</span>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl dark:bg-[#2E3241] bg-gray-100 dark:text-white font-bold text-2xl flex justify-between p-4 my-4"
+        >
+          <div class="border-gray-200 pb-2">1</div>
+
+          <div class="border-gray-200 pb-2">
+            <div class="flex items-center">
+              <img src="wazirx.png" alt="WazirX" class="w-6 h-6 mr-2" />
+              <span>WazirX</span>
+            </div>
+          </div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010</div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010 / ₹ 37,40,000</div>
+          <div class="border-gray-200 pb-2 text-red-500">-2.84 %</div>
+          <div class="border-gray-200 pb-2 text-red-500">
+            ₹ <span class="text-red-500">-1,08,716</span>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl dark:bg-[#2E3241] bg-gray-100 dark:text-white font-bold text-2xl flex justify-between p-4 my-4"
+        >
+          <div class="border-gray-200 pb-2">1</div>
+
+          <div class="border-gray-200 pb-2">
+            <div class="flex items-center">
+              <img src="wazirx.png" alt="WazirX" class="w-6 h-6 mr-2" />
+              <span>WazirX</span>
+            </div>
+          </div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010</div>
+          <div class="border-gray-200 pb-2">₹ 37,22,010 / ₹ 37,40,000</div>
+          <div class="border-gray-200 pb-2 text-red-500">-2.84 %</div>
+          <div class="border-gray-200 pb-2 text-red-500">
+            ₹ <span class="text-red-500">-1,08,716</span>
+          </div>
+        </div>
+      </div>
+      <!-- table section end  -->
+      <!-- footer start  -->
+      <div class="flex text-xs dark:text-[#77847A] justify-between pt-5 pb-14">
+        <div class="flex space-x-5">
+          <div>Copyright © 2019</div>
+          <div>HodlInfo.com</div>
+        </div>
+        <div class="">support</div>
+      </div>
+      <!-- footer end  -->
+    </section>
+
+    <!-- add to home screen floating button start  -->
+    <section
+      class="fixed bottom-0 w-full bg-[#191D28] h-12 flex justify-center items-center"
+    >
+      <button class="text-[#3DC6C1] p-2 border border-[#3DC6C1] rounded">
+        Add Hodlinfo to Home Screen
+      </button>
+    </section>
+    <!-- add to home screen floating button end  -->
+
+    <script src="script.js"></script>
+  
+
+  </body>
+</html>
