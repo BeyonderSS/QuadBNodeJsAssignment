@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 function connect() {
-  mongoose.connect("mongodb+srv://admin:300803@assignmentcluster.wzmdgmq.mongodb.net/quadb");
+  mongoose.connect("your-mongodb-connection-string/quadb");
 
   const db = mongoose.connection;
 
